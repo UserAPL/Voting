@@ -1,0 +1,51 @@
+voting application 
+A functionality where user can give vote to the given set of candidates
+
+
+Models
+Routes
+
+
+voting app functionality
+
+1. user sign in/up
+2. see candidates list
+3. vote only once
+4. route which shows list of candidates and 
+live vote counts sorted by their vote count
+5. user data must contain one unique govt id proof: aadhar no
+6. one admin maintains candidates' list but can't vote
+7. user can change their password
+8. user can login with only aadhar and password 
+9. admin can't vote
+
+
+-----------------------------------------
+
+Routes(End points)
+
+User Authentication
+/signup: POST- Create new user
+/login: POST- Login to existing a/c
+
+voting
+/candidates:  GET- candidates list
+/vote/candidateId: POST- Vote for specific candidateId
+
+Vote Counts
+/vote/counts: GET- get candidates list sorted by vote counts
+
+User Profile
+/profile: GET- 
+/profile/password: PUT-
+
+Admin Candidate Management:
+/candidate: POST- Create new candidate
+/candidate/:candidateId: PUT- update existing candidate
+/candidate/:candidateId: DELETE- delete existing candidate
+
+There is going to be an .env file for 
+PORT=3000
+MONGODB_URL=<local host url>
+MONGODB_URL_LOCAL=mongodb+srv://<username>:<password>@<cluster_name>.jpvhx.mongodb.net/
+JWT_SECRET=<secret code>
